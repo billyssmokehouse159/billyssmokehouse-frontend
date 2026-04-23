@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import billyslogo from "./assets/logo.jpg";
 import { useDeviceType } from "./hooks/useDeviceType";
-
-
+import { NavMenu } from "./NavMenu";
 
 function App() {
   const device = useDeviceType();
@@ -10,8 +9,8 @@ function App() {
   return (
     <div
       style={{
-        width: "100vw",
-        height: "100vh",
+        width: "100%",
+        minHeight: "100dvh",
         backgroundImage:
           "url('https://hickorys.co.uk/app/uploads/2026/04/Homepage-Image-e1776844602421.png')",
         backgroundSize: "cover",
@@ -36,7 +35,7 @@ function App() {
           >
             <img height={225} width={225} src={billyslogo}></img>
           </div>
-          <div>Other</div>
+          <NavMenu />
         </div>
       )}
       {device === "mobile" && (
@@ -56,7 +55,7 @@ function App() {
           >
             <img height={400} width={"100%"} src={billyslogo}></img>
           </div>
-          <div>Other</div>
+          <NavMenu />
         </div>
       )}
     </div>
