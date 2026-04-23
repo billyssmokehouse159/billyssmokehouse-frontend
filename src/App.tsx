@@ -1,7 +1,7 @@
 import React from "react";
 import billyslogo from "./assets/logo.jpg";
 import { useDeviceType } from "./hooks/useDeviceType";
-import { NavMenu } from "./NavMenu";
+import { NavMenu } from "./components/NavMenu";
 
 function App() {
   const device = useDeviceType();
