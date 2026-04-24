@@ -1,5 +1,4 @@
 
-
 export const NavMenu = () => {
   return (
     <div
@@ -13,8 +12,10 @@ export const NavMenu = () => {
         letterSpacing: "2px",
         textTransform: "uppercase",
         padding: "35px 0 40px",
-        background: "linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0))",
+        background:
+          "linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0))",
         overflow: "hidden",
+        height: "fit-content",
       }}
     >
       <div style={{ cursor: "pointer" }}>Menu</div>

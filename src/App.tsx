@@ -1,6 +1,6 @@
-import billyslogo from "./assets/logo.jpg";
+import { DesktopHeader } from "./components/Headers/DesktopHeader";
+import { MobileHeader } from "./components/Headers/MobileHeader";
 import { useDeviceType } from "./hooks/useDeviceType";
-import { NavMenu } from "./components/NavMenu";
 
 function App() {
   const device = useDeviceType();
@@ -19,44 +19,9 @@ function App() {
       }}
     >
       {(device === "desktop" || device === "tablet") && (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "3fr 3fr",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifySelf: "center",
-            }}
-          >
-            <img height={225} width={225} src={billyslogo}></img>
-          </div>
-          <NavMenu />
-        </div>
+        <DesktopHeader />
       )}
-      {device === "mobile" && (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateRows: "1fr 1fr",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifySelf: "center",
-              width: "100%",
-            }}
-          >
-            <img height={400} width={"100%"} src={billyslogo}></img>
-          </div>
-          <NavMenu />
-        </div>
-      )}
+      {device === "mobile" && <MobileHeader />}
     </div>
   );
 }
