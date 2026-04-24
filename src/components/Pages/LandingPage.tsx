@@ -18,6 +18,7 @@ export const LandingPage = () => {
         opacity: 1,
       }}
     >
+      Hello
       {(device === "desktop" || device === "tablet") && <DesktopHeader />}
       {device === "mobile" && <MobileHeader />}
     </div>
