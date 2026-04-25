@@ -1,6 +1,7 @@
 import { useDeviceType } from "../../hooks/useDeviceType";
 import { DesktopHeader } from "../Headers/DesktopHeader";
 import { MobileHeader } from "../Headers/MobileHeader";
+import { LandingPageMessage } from "../other/LandingPageMessage";
 
 export const LandingPage = () => {
   const device = useDeviceType();
@@ -20,6 +21,16 @@ export const LandingPage = () => {
     >
       {(device === "desktop" || device === "tablet") && <DesktopHeader />}
       {device === "mobile" && <MobileHeader />}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 2fr 1fr",
+        }}
+      >
+        <div></div>
+        <LandingPageMessage />
+        <div></div>
+      </div>
     </div>
   );
 };
