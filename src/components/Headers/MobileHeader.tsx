@@ -7,7 +7,7 @@ export const MobileHeader = ({ solidBackground, miniLogo }: HeaderProps) => {
     <div
       style={{
         display: "grid",
-        gridTemplateRows: "1fr 1fr",
+        gridTemplateRows: "1fr 0fr",
         backgroundColor: solidBackground ? "black" : "none",
       }}
     >
