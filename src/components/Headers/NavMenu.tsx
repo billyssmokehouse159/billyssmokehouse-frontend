@@ -1,5 +1,6 @@
 
 export const NavMenu = () => {
+  
   return (
     <div
       style={{
@@ -18,9 +19,9 @@ export const NavMenu = () => {
         height: "fit-content",
       }}
     >
-      <div style={{ cursor: "pointer" }}>Menu</div>
-      <div style={{ cursor: "pointer" }}>Location</div>
-      <div style={{ cursor: "pointer" }}>Contact</div>
+      <div style={{ cursor: "pointer" }} onClick={()=>(window.location.href="/menu")}>Menu</div>
+      <div style={{ cursor: "pointer" }} onClick={()=>(window.location.href="/location")}>Location</div>
+      <div style={{ cursor: "pointer" }} onClick={()=>(window.location.href="/contact")}>Contact</div>
     </div>
   );
 };

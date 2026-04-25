@@ -22,6 +22,8 @@ export const Logo = ({
         width={isMobile ? "100%" : miniLogo ? "100px" : "250"}
         src={billyslogo}
         alt="logo"
+        onClick={()=>{window.location.href="/"}}
+        style={{cursor: "pointer"}}
       />
     </div>
   );
