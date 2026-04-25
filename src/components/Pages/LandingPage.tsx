@@ -24,7 +24,8 @@ export const LandingPage = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 2fr 1fr",
+          gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 3fr 1fr",
+          justifyItems: "center"
         }}
       >
         <div></div>
