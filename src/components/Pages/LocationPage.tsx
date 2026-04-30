@@ -8,17 +8,13 @@ export const GoogleMap = () => {
     lat: 51.5020881,
     lng: -0.2317584,
   };
-  const locationTwo = {
-    lat: 51.5072,
-    lng: -0.1276,
-  };
+
 
   return (
     <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
       <div style={{ width: "100%", height: "100%" }}>
         <Map defaultCenter={locationOne} defaultZoom={13}>
           <Marker position={locationOne} />
-          <Marker position={locationTwo} />
         </Map>
       </div>
     </APIProvider>
