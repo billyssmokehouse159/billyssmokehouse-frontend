@@ -4,6 +4,7 @@ import { MobileHeader } from "../Headers/MobileHeader";
 import { GiftCardBanner } from "../LandingPageComponents/GiftCardBanner";
 import { LandingPageMessage } from "../LandingPageComponents/LandingPageMessage";
 import { MenuBanner } from "../LandingPageComponents/MenuBanner";
+import { PictureBanner } from "../LandingPageComponents/PictureBanner";
 
 export const LandingPage = () => {
   const device = useDeviceType();
@@ -41,6 +42,8 @@ export const LandingPage = () => {
           <div></div>
         </div>
       </div>
+      
+        <PictureBanner />
       <div
         style={{
           display: "grid",
@@ -61,5 +64,3 @@ export const LandingPage = () => {
     </div>
   );
 };
-
-
