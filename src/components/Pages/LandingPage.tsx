@@ -1,8 +1,8 @@
 import { useDeviceType } from "../../hooks/useDeviceType";
 import { DesktopHeader } from "../Headers/DesktopHeader";
 import { MobileHeader } from "../Headers/MobileHeader";
+import { GiftCardBanner } from "../LandingPageComponents/GiftCardBanner";
 import { LandingPageMessage } from "../LandingPageComponents/LandingPageMessage";
-import menuBackgroundImg from "../../assets/menu-banner-background.png";
 import { MenuBanner } from "../LandingPageComponents/MenuBanner";
 
 export const LandingPage = () => {
@@ -41,7 +41,23 @@ export const LandingPage = () => {
           <div></div>
         </div>
       </div>
-      <MenuBanner />
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 3px 1fr",
+        }}
+      >
+        <MenuBanner />
+        {device !== "mobile" && (
+          <div
+            style={{
+              width: "3px",
+              background: "#666",
+            }}
+          />
+        )}
+        <GiftCardBanner />
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { ActionButton } from "../Shared/ActionButton";
 
-export const MenuBanner = () => {
+export const GiftCardBanner = () => {
   return (
     <div
       style={{
@@ -13,11 +13,9 @@ export const MenuBanner = () => {
       }}
     >
       <ActionButton
-      link="/menu"
-      text="Menu"
+      link="/giftcard"
+      text="Gift Cards"
       />
     </div>
   );
 };
-
-
