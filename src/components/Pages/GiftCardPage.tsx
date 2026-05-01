@@ -18,14 +18,38 @@ export const GiftCardPage = () => {
         )}
         {device === "mobile" && <MobileHeader />}
       </div>
-      {/* <div
+      <div
         style={{
           display: "grid",
-          gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 2fr",
+          placeItems: device !== "mobile" ? "center" :"flex-start",
           minHeight: "100dvh",
           backgroundColor: "#e6e1db",
+          textAlign: "center",
         }}
-      ></div> */}
+      >
+        <div>
+          <h1
+            style={{
+              fontSize: "48px",
+              margin: 0,
+              fontWeight: 700,
+              color: "#222",
+            }}
+          >
+            Coming Soon
+          </h1>
+
+          <p
+            style={{
+              marginTop: "12px",
+              fontSize: "18px",
+              color: "#555",
+            }}
+          >
+            We’re working on something great — stay tuned.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
