@@ -11,11 +11,13 @@ export const PictureBanner = () => {
       style={{
         display: device === "mobile" ? "none" : "grid",
         gridTemplateColumns:
-          device === "tablet" ? "1fr 1fr" : "1fr 1fr 1fr 1fr 1fr",
+          device === "tablet" ? "repeat(2, 1fr)" : "repeat(5, 1fr)",
         backgroundColor: "rgb(255 176 5 / 21%)",
         justifyItems: "center",
         width: "100%",
         height: "30dvh",
+        gap: "20px",
+        padding: "40px 20px",
       }}
     >
       {device !== "tablet" && (
