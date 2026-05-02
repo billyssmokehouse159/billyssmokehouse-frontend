@@ -17,8 +17,7 @@ export const PictureBanner = () => {
         width: "100%",
         height: "30dvh",
         gap: "20px",
-        padding: "40px 20px",
-      }}
+    }}
     >
       {device !== "tablet" && (
         <>
