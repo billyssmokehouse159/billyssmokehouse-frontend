@@ -2,9 +2,6 @@ import { ImageHolder } from "./ImageHolder";
 import draftImg from "../../assets/menu-banner-background.png";
 import { useDeviceType } from "../../hooks/useDeviceType";
 
-// rgb(139, 69, 19)
-// rgb(165, 42, 42) 
-// rgb(178, 34, 34) 
 export const PictureBanner = () => {
   const device = useDeviceType();
 
