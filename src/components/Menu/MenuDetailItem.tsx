@@ -1,11 +1,14 @@
 import draftImg from "../../assets/menu-banner-background.png";
+import { useDeviceType } from "../../hooks/useDeviceType";
 
 export const MenuDetailItem = () => {
+  const device = useDeviceType();
+
   return (
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
+        gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 1fr",
         width: "100%",
       }}
     >
@@ -18,7 +21,7 @@ export const MenuDetailItem = () => {
         <img
           src={draftImg}
           style={{
-            width: 450,
+            width: device === "mobile" ? 300 : 450,
             borderRadius: 50,
             border: "1px solid black",
           }}

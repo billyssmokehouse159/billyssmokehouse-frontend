@@ -12,9 +12,9 @@ export const PictureBanner = () => {
         display: device === "mobile" ? "none" : "grid",
         gridTemplateColumns:
           device === "tablet" ? "repeat(2, 1fr)" : "repeat(5, 1fr)",
-        // backgroundColor: "rgb(255 176 5 / 21%)",
+        backgroundColor: "rgb(230, 225, 219)",
         // backgroundColor: "rgb(139, 69, 19)",
-        backgroundColor: "rgb(165, 42, 42) ",
+        // backgroundColor: "rgb(165, 42, 42) ",
         // backgroundColor: "rgb(178, 34, 34) ",
 
         justifyItems: "center",
