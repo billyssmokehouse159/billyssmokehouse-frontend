@@ -28,7 +28,7 @@ export const MenuPage = () => {
         </div>
       </div>
       <div>
-        <MenuDetails />
+        {/* <MenuDetails /> */}
       </div>
     </>
   );
