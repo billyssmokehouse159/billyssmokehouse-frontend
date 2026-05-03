@@ -2,7 +2,6 @@ import { useDeviceType } from "../../hooks/useDeviceType";
 import { DesktopHeader } from "../Headers/DesktopHeader";
 import { MobileHeader } from "../Headers/MobileHeader";
 import { MenuBlackBoard } from "../Menu/MenuBlackBoard";
-import { MenuDetails } from "../Menu/MenuDetails";
 
 export const MenuPage = () => {
   const device = useDeviceType();
