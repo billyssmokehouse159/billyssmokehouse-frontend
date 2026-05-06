@@ -55,20 +55,37 @@ export const ItemWrapper = () => {
       />
       <div
         style={{
+          display: "flex",
+          flexDirection: "column",
           padding:
-            device === "mobile" ? "20px 20px 20px 20px" : "50px 50px 50px 50px",
-          fontSize: "15px",
-          lineHeight: "1.6",
+            device === "mobile" ? "20px 20px 20px 20px" : "20px 50px 50px 50px",
+
           color: "#5a3e3b",
           textAlign: "center",
         }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla
-        ex sed turpis faucibus, non hendrerit risus tempus. Morbi nec lacinia t
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla
-        ex sed turpis faucibus, non hendrerit risus tempus. Morbi nec lacinia t
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla
-        ex sed turpis faucibus, non hendrerit risus tempus. Morbi nec lacinia t
+        <div
+          style={{
+            fontSize: "35px",
+            lineHeight: "1.6",
+          }}
+        >
+          Title
+        </div>
+        <div
+          style={{
+            fontSize: "15px",
+            lineHeight: "1.6",
+          }}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla
+          ex sed turpis faucibus, non hendrerit risus tempus. Morbi nec lacinia
+          t Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          fringilla ex sed turpis faucibus, non hendrerit risus tempus. Morbi
+          nec lacinia t Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Sed fringilla ex sed turpis faucibus, non hendrerit risus tempus.
+          Morbi nec lacinia t
+        </div>
       </div>
     </div>
   );
