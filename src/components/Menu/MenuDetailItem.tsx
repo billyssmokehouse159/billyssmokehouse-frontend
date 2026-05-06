@@ -4,39 +4,64 @@ import { useDeviceType } from "../../hooks/useDeviceType";
 export const MenuDetailItem = () => {
   const device = useDeviceType();
 
+  console.log("device", device);
   return (
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 1fr",
+        gridTemplateColumns: "1fr",
         width: "100%",
       }}
     >
       <div
         style={{
+          display: "grid",
+          gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 1fr",
           justifySelf: "center",
-          alignContent: "center",
+          columnGap: "80px",
+          rowGap: "50px",
+          overflow: "scroll",
         }}
       >
-        <img
-          src={draftImg}
-          style={{
-            width: device === "mobile" ? 300 : 450,
-            borderRadius: 50,
-            border: "1px solid black",
-          }}
-        />
+        <ItemWrapper />
+        <ItemWrapper />
       </div>
+    </div>
+  );
+};
+
+export const ItemWrapper = () => {
+  const device = useDeviceType();
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        border: "5px solid #c97e5d",
+        alignItems: "center",
+      }}
+    >
+      <img
+        src={draftImg}
+        style={{
+          width: device === "mobile" ? 300 : 450,
+          padding:
+            device === "mobile" ? "20px 20px 20px 20px" : "50px 50px 0px 50px",
+        }}
+      />
       <div
         style={{
-          width: "100%",
-          height: "100%",
-          borderRadius: 50,
-          display: "flex",
-          justifyContent: "center",
+          padding:
+            device === "mobile" ? "20px 20px 20px 20px" : "50px 0px 50px 50px",
         }}
       >
-        description
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla
+        ex sed turpis faucibus, non hendrerit risus tempus. Morbi nec lacinia t
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla
+        ex sed turpis faucibus, non hendrerit risus tempus. Morbi nec lacinia t
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla
+        ex sed turpis faucibus, non hendrerit risus tempus. Morbi nec lacinia t
       </div>
     </div>
   );
