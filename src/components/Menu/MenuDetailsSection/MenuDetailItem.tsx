@@ -1,5 +1,5 @@
 import { useDeviceType } from "../../../hooks/useDeviceType";
-import { ItemWrapperHorizontal } from "./ItemWrapperHorizontal";
+import { ItemWrapperHorizontal, ItemWrapperHorizontalThreePictures } from "./ItemWrapperHorizontal";
 import { ItemWrapperVertical } from "./ItemWrapperVertical";
 
 export const MenuDetailItem = () => {
@@ -28,6 +28,7 @@ export const MenuDetailItem = () => {
         <ItemWrapperVertical />
         <ItemWrapperVertical />
       </div>
+      <ItemWrapperHorizontalThreePictures />
       <ItemWrapperHorizontal />
     </div>
   );
