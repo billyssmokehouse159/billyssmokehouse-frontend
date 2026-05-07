@@ -31,7 +31,7 @@ export const VideoBanner = () => {
       >
         <video
           controls
-          src="https://file-examples.com/storage/fe6419bf2469fcd93947e85/2017/04/file_example_MP4_1920_18MG.mp4"
+          src="https://www.instagram.com/83fbc7e4-29a1-4cd8-a28f-c42651f72402"
           style={{
             width: "100%",
             height: "100%",
@@ -47,7 +47,7 @@ export const VideoBanner = () => {
       >
         <video
           controls
-          src="https://file-examples.com/storage/fe6419bf2469fcd93947e85/2017/04/file_example_MP4_1920_18MG.mp4"
+          src=""
           style={{
             width: "100%",
             height: "100%",
@@ -55,23 +55,24 @@ export const VideoBanner = () => {
           }}
         />
       </div>
-     {device !== "tablet" && <div
-        style={{
-          width: "300px",
-          height: device !== "mobile" ? "45dvh" : "none",
-        }}
-      >
-        <video
-          controls
-          src="https://file-examples.com/storage/fe6419bf2469fcd93947e85/2017/04/file_example_MP4_1920_18MG.mp4"
+      {device !== "tablet" && (
+        <div
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            width: "300px",
+            height: device !== "mobile" ? "45dvh" : "none",
           }}
-        />
-      </div>}
-     
+        >
+          <video
+            controls
+            src=""
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };
