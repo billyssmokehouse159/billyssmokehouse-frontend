@@ -1,36 +1,7 @@
-import draftImg from "../../assets/menu-banner-background.png";
-import { useDeviceType } from "../../hooks/useDeviceType";
+import draftImg from "../../../assets/menu-banner-background.png";
+import { useDeviceType } from "../../../hooks/useDeviceType";
 
-export const MenuDetailItem = () => {
-  const device = useDeviceType();
-
-  console.log("device", device);
-  return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr",
-        width: "100%",
-      }}
-    >
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 1fr",
-          justifySelf: "center",
-          columnGap: "80px",
-          rowGap: "50px",
-          overflow: "scroll",
-        }}
-      >
-        <ItemWrapper />
-        <ItemWrapper />
-      </div>
-    </div>
-  );
-};
-
-export const ItemWrapper = () => {
+export const ItemWrapperVertical = () => {
   const device = useDeviceType();
 
   return (
@@ -38,8 +9,8 @@ export const ItemWrapper = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        border: "5px solid #c97e5d",
         alignItems: "center",
+        border: "5px solid #c97e5d",
         borderRadius: "16px",
         backgroundColor: "#fff",
         boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
@@ -48,7 +19,7 @@ export const ItemWrapper = () => {
       <img
         src={draftImg}
         style={{
-          width: device === "mobile" ? 300 : 450,
+          width: device === "mobile" || device === "tablet" ? 250 : 450,
           padding:
             device === "mobile" ? "20px 20px 20px 20px" : "50px 50px 0px 50px",
         }}

@@ -31,10 +31,6 @@ export const MenuDetails = () => {
       </div>
      
       <MenuDetailItem />
-      {/* <MenuDetailItem />
-      <MenuDetailItem />
-      <MenuDetailItem />
-      <MenuDetailItem /> */}
     </div>
   );
 };
