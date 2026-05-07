@@ -10,25 +10,31 @@ export const MenuPage = () => {
   return (
     <>
       <div
-        style={{
-          width: "100%",
-          minHeight: "100dvh",
-          backgroundImage:
-            "url('https://hickorys.co.uk/app/uploads/2026/04/Homepage-Image-e1776844602421.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          opacity: 1,
-        }}
-      >
-        <div>
-          {(device === "desktop" || device === "tablet") && <DesktopHeader />}
-          {device === "mobile" && <MobileHeader />}
-          <MenuBlackBoard />
+      style={{
+        display: "flex",
+        flexDirection: "column"
+      }}>
+        <div
+          style={{
+            width: "100%",
+            minHeight: "98dvh",
+            backgroundImage:
+              "url('https://hickorys.co.uk/app/uploads/2026/04/Homepage-Image-e1776844602421.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            opacity: 1,
+          }}
+        >
+          <div>
+            {(device === "desktop" || device === "tablet") && <DesktopHeader />}
+            {device === "mobile" && <MobileHeader />}
+            <MenuBlackBoard />
+          </div>
         </div>
-      </div>
-      <div>
-        <MenuDetails />
+        <div>
+          <MenuDetails />
+        </div>
       </div>
     </>
   );
