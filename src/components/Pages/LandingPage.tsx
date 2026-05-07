@@ -5,6 +5,7 @@ import { GiftCardBanner } from "../LandingPageComponents/GiftCardBanner";
 import { LandingPageMessage } from "../LandingPageComponents/LandingPageMessage";
 import { MenuBanner } from "../LandingPageComponents/MenuBanner";
 import { PictureBanner } from "../LandingPageComponents/PictureBanner";
+import { VideoBanner } from "../LandingPageComponents/VideoBanner";
 
 export const LandingPage = () => {
   const device = useDeviceType();
@@ -42,8 +43,8 @@ export const LandingPage = () => {
           <div></div>
         </div>
       </div>
-      
-        <PictureBanner />
+
+      <PictureBanner />
       <div
         style={{
           display: "grid",
@@ -61,6 +62,9 @@ export const LandingPage = () => {
         )}
         <GiftCardBanner />
       </div>
+        <VideoBanner />
     </div>
   );
 };
+
+
