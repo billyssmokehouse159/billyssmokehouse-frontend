@@ -6,6 +6,7 @@ import { LandingPageMessage } from "../LandingPageComponents/LandingPageMessage"
 import { MenuBanner } from "../LandingPageComponents/MenuBanner";
 import { PictureBanner } from "../LandingPageComponents/PictureBanner";
 import { VideoBanner } from "../LandingPageComponents/VideoBanner";
+import { Heading } from "../LandingPageComponents/Heading";
 
 export const LandingPage = () => {
   const device = useDeviceType();
@@ -62,7 +63,15 @@ export const LandingPage = () => {
         )}
         <GiftCardBanner />
       </div>
-        <VideoBanner />
+      <div
+        style={{
+          width: "100%",
+          height: "2px",
+          backgroundColor: "#666565",
+        }}
+      />
+      <Heading />
+      <VideoBanner />
     </div>
   );
 };
