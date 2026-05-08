@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useDeviceType } from "../../hooks/useDeviceType";
 
 export const VideoBanner = () => {
@@ -23,11 +24,12 @@ export const VideoBanner = () => {
         paddingTop: "50px",
       }}
     >
-      <div
+      <motion.div
         style={{
           width: "300px",
           height: device !== "mobile" ? "45dvh" : "none",
         }}
+        whileHover={{ scale: 1.1 }}
       >
         <video
           controls
@@ -38,40 +40,42 @@ export const VideoBanner = () => {
             objectFit: "cover",
           }}
         />
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         style={{
           width: "300px",
           height: device !== "mobile" ? "45dvh" : "none",
         }}
+        whileHover={{ scale: 1.1 }}
       >
         <video
           controls
-          src=""
+          src="https://www.instagram.com/83fbc7e4-29a1-4cd8-a28f-c42651f72402"
           style={{
             width: "100%",
             height: "100%",
             objectFit: "cover",
           }}
         />
-      </div>
+      </motion.div>
       {device !== "tablet" && (
-        <div
+        <motion.div
           style={{
             width: "300px",
             height: device !== "mobile" ? "45dvh" : "none",
           }}
+          whileHover={{ scale: 1.1 }}
         >
           <video
             controls
-            src=""
+            src="https://www.instagram.com/83fbc7e4-29a1-4cd8-a28f-c42651f72402"
             style={{
               width: "100%",
               height: "100%",
               objectFit: "cover",
             }}
           />
-        </div>
+        </motion.div>
       )}
     </div>
   );
