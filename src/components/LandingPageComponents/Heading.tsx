@@ -9,7 +9,6 @@ export const Heading = () => {
         textTransform: "uppercase",
         color: "#ff2b2b",
         backgroundColor: "#000",
-        width: "100%",
         padding: "30px 20px",
         textAlign: "center",
         fontFamily: "'Bebas Neue', 'Oswald', sans-serif",
