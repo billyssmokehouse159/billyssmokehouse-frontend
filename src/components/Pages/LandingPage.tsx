@@ -7,6 +7,7 @@ import { MenuBanner } from "../LandingPageComponents/MenuBanner";
 import { PictureBanner } from "../LandingPageComponents/PictureBanner";
 import { VideoBanner } from "../LandingPageComponents/VideoBanner";
 import { Heading } from "../LandingPageComponents/Heading";
+import { Footer } from "./Footer";
 
 export const LandingPage = () => {
   const device = useDeviceType();
@@ -72,6 +73,7 @@ export const LandingPage = () => {
       />
       <Heading />
       <VideoBanner />
+      <Footer />
     </div>
   );
 };

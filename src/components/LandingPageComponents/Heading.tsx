@@ -8,7 +8,7 @@ export const Heading = () => {
         letterSpacing: "3px",
         textTransform: "uppercase",
         color: "#ff2b2b",
-        backgroundColor: "#000",
+        backgroundColor: "rgb(51 51 51)",
         padding: "30px 20px",
         textAlign: "center",
         fontFamily: "'Bebas Neue', 'Oswald', sans-serif",

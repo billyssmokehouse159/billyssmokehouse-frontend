@@ -7,7 +7,7 @@ export const MenuBanner = () => {
         display: "flex",
         width: "100%",
         minHeight: "10dvh",
-        backgroundColor: "Black",
+        backgroundColor: "rgb(51 51 51)",
 
         justifyContent: "center",
         alignItems: "center",
