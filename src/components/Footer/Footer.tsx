@@ -15,7 +15,8 @@ export const Footer = () => {
         style={{
           width: "100%",
           height: "5px",
-          backgroundColor: "#c97e5d",
+          backgroundColor: "rgb(230 225 219)",
+          paddingTop: 50,
         }}
       ></div>
       <div
@@ -43,7 +44,7 @@ export const Footer = () => {
           style={{
             display: "grid",
             gridTemplateColumns:
-              device === "mobile" ? "1fr" : "1fr 1fr 1fr 1fr",
+              device === "mobile" ? "1fr" : "1fr 2px 1fr 2px 1fr 2px 1fr",
             fontSize: "25px",
             fontWeight: 400,
             letterSpacing: "3px",
@@ -64,6 +65,7 @@ export const Footer = () => {
           >
             Menu
           </div>
+          <Divider />
           <div
             style={{
               cursor: "pointer",
@@ -72,6 +74,8 @@ export const Footer = () => {
           >
             Location
           </div>
+          <Divider />
+
           <div
             style={{
               cursor: "pointer",
@@ -80,6 +84,8 @@ export const Footer = () => {
           >
             GiftCards
           </div>
+          <Divider />
+
           <div
             style={{
               cursor: "pointer",
@@ -93,3 +99,12 @@ export const Footer = () => {
     </div>
   );
 };
+
+export const Divider = ()=>{
+  return <div
+  style={{
+    height: "100%",
+    width: "2px",
+    backgroundColor: "pink"
+  }}></div>
+}
