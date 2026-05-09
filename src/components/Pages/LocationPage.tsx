@@ -2,13 +2,13 @@ import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 import { useDeviceType } from "../../hooks/useDeviceType";
 import { DesktopHeader } from "../Headers/DesktopHeader";
 import { MobileHeader } from "../Headers/MobileHeader";
+import { Footer } from "../Footer/Footer";
 
 export const GoogleMap = () => {
   const locationOne = {
     lat: 51.5020881,
     lng: -0.2317584,
   };
-
 
   return (
     <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
@@ -120,6 +120,7 @@ export const LocationPage = () => {
           <GoogleMap />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

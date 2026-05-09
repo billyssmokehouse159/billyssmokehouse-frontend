@@ -7,7 +7,7 @@ import { MenuBanner } from "../LandingPageComponents/MenuBanner";
 import { PictureBanner } from "../LandingPageComponents/PictureBanner";
 import { VideoBanner } from "../LandingPageComponents/VideoBanner";
 import { Heading } from "../LandingPageComponents/Heading";
-import { Footer } from "./Footer";
+import { Footer } from "../Footer/Footer";
 
 export const LandingPage = () => {
   const device = useDeviceType();

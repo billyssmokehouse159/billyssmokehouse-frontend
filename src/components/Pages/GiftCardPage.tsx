@@ -1,4 +1,5 @@
 import { useDeviceType } from "../../hooks/useDeviceType";
+import { Footer } from "../Footer/Footer";
 import { DesktopHeader } from "../Headers/DesktopHeader";
 import { MobileHeader } from "../Headers/MobileHeader";
 
@@ -21,7 +22,7 @@ export const GiftCardPage = () => {
       <div
         style={{
           display: "grid",
-          placeItems: device !== "mobile" ? "center" :"flex-start",
+          placeItems: device !== "mobile" ? "center" : "flex-start",
           minHeight: "100dvh",
           backgroundColor: "#e6e1db",
           textAlign: "center",
@@ -50,6 +51,7 @@ export const GiftCardPage = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

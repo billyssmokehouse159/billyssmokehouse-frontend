@@ -1,7 +1,9 @@
+import { useDeviceType } from "../../hooks/useDeviceType";
 import { Logo } from "../Headers/Logo";
 
-
 export const Footer = () => {
+  const device = useDeviceType();
+
   return (
     <div
       style={{
@@ -19,7 +21,7 @@ export const Footer = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 2fr",
+          gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 1fr 2fr",
           width: "100%",
           color: "#ff2b2b",
           backgroundColor: "rgb(51 51 51)",
@@ -40,7 +42,8 @@ export const Footer = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr 1fr",
+            gridTemplateColumns:
+              device === "mobile" ? "1fr" : "1fr 1fr 1fr 1fr",
             fontSize: "25px",
             fontWeight: 400,
             letterSpacing: "3px",
@@ -48,9 +51,9 @@ export const Footer = () => {
             color: "#ff2b2b",
             textAlign: "center",
             fontFamily: "'Bebas Neue', 'Oswald', sans-serif",
-            textShadow: "0 0 12px rgba(255,0,0,0.6)",
             width: "100%",
             justifyItems: "center",
+            backgroundColor: "rgb(51 51 51)",
           }}
         >
           <div

@@ -1,4 +1,5 @@
 import { useDeviceType } from "../../hooks/useDeviceType";
+import { Footer } from "../Footer/Footer";
 import { DesktopHeader } from "../Headers/DesktopHeader";
 import { MobileHeader } from "../Headers/MobileHeader";
 
@@ -26,6 +27,7 @@ export const ContactPage = () => {
           backgroundColor: "#e6e1db",
         }}
       ></div>
+      <Footer />
     </div>
   );
 };

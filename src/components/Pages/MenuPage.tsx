@@ -1,4 +1,5 @@
 import { useDeviceType } from "../../hooks/useDeviceType";
+import { Footer } from "../Footer/Footer";
 import { DesktopHeader } from "../Headers/DesktopHeader";
 import { MobileHeader } from "../Headers/MobileHeader";
 import { MenuBlackBoard } from "../Menu/MenuBlackBoard";
@@ -10,10 +11,11 @@ export const MenuPage = () => {
   return (
     <>
       <div
-      style={{
-        display: "flex",
-        flexDirection: "column"
-      }}>
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <div
           style={{
             width: "100%",
@@ -35,6 +37,7 @@ export const MenuPage = () => {
         <div>
           <MenuDetails />
         </div>
+        <Footer />
       </div>
     </>
   );
