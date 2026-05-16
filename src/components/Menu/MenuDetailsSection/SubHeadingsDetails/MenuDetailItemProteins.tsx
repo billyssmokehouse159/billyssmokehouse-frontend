@@ -1,8 +1,9 @@
-import { useDeviceType } from "../../../hooks/useDeviceType";
-import { ItemWrapperHorizontal, ItemWrapperHorizontalThreePictures } from "./ItemWrapperHorizontal";
-import { ItemWrapperVertical } from "./ItemWrapperVertical";
+import { useDeviceType } from "../../../../hooks/useDeviceType";
+import { ItemWrapperHorizontal } from "../ItemWrapperHorizontal";
+import { ItemWrapperHorizontalThreePictures } from "../ItemWrapperHorizontalThreePictures";
+import { ItemWrapperVertical } from "../ItemWrapperVertical";
 
-export const MenuDetailItem = () => {
+export const MenuDetailItemProteins = () => {
   const device = useDeviceType();
 
   return (

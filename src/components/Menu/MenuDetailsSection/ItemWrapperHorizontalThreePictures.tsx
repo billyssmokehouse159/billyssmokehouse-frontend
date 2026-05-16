@@ -1,7 +1,7 @@
-import draftImg from "../../../assets/menu-banner-background.png";
 import { useDeviceType } from "../../../hooks/useDeviceType";
+import draftImg from "../../../assets/menu-banner-background.png";
 
-export const ItemWrapperHorizontal = () => {
+export const ItemWrapperHorizontalThreePictures = () => {
   const device = useDeviceType();
 
   return (
@@ -18,14 +18,32 @@ export const ItemWrapperHorizontal = () => {
     >
       <div
         style={{
-          display: "flex",
-          justifyContent: "center",
+          display: "grid",
+          gridTemplateColumns: device === "mobile" ? "1fr" : "1fr 1fr 1fr",
+          justifyItems: "center",
+          gap: 50,
         }}
       >
         <img
           src={draftImg}
           style={{
-            width: device === "mobile" ? 300 : 450,
+            width: device === "mobile" ? 300 : 150,
+            padding:
+              device === "mobile" ? "20px 0px 20px 0px" : "50px 0px 50px 0px",
+          }}
+        />
+        <img
+          src={draftImg}
+          style={{
+            width: device === "mobile" ? 300 : 150,
+            padding:
+              device === "mobile" ? "20px 0px 20px 0px" : "50px 0px 50px 0px",
+          }}
+        />
+        <img
+          src={draftImg}
+          style={{
+            width: device === "mobile" ? 300 : 150,
             padding:
               device === "mobile" ? "20px 0px 20px 0px" : "50px 0px 50px 0px",
           }}
@@ -65,4 +83,3 @@ export const ItemWrapperHorizontal = () => {
     </div>
   );
 };
-

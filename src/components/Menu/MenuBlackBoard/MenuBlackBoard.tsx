@@ -1,4 +1,4 @@
-import { useDeviceType } from "../../hooks/useDeviceType";
+import { useDeviceType } from "../../../hooks/useDeviceType";
 import { MenuItem } from "./MenuItem";
 import { SectionTitle } from "./SectionTitle";
 

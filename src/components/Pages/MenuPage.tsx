@@ -2,7 +2,7 @@ import { useDeviceType } from "../../hooks/useDeviceType";
 import { Footer } from "../Footer/Footer";
 import { DesktopHeader } from "../Headers/DesktopHeader";
 import { MobileHeader } from "../Headers/MobileHeader";
-import { MenuBlackBoard } from "../Menu/MenuBlackBoard";
+import { MenuBlackBoard } from "../Menu/MenuBlackBoard/MenuBlackBoard";
 import { MenuDetails } from "../Menu/MenuDetailsSection/MenuDetails";
 
 export const MenuPage = () => {

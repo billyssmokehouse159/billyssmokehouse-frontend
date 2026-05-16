@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MenuDetailItem } from "./MenuDetailItem";
+import { MenuDetailItemProteins } from "./SubHeadingsDetails/MenuDetailItemProteins";
 import { useDeviceType } from "../../../hooks/useDeviceType";
 
 type SectionTypes = "Proteins" | "Sandwiches" | "Sides" | "Drink";
@@ -23,13 +23,13 @@ export const MenuDetails = () => {
           paddingTop: "30px",
         }}
       >
-        <SectionHeading value={"Proteins"} setSection={setSection}/>
-        <SectionHeading value={"Sandwiches"} setSection={setSection}/>
-        <SectionHeading value={"Sides"} setSection={setSection}/>
-        <SectionHeading value={"Drink"} setSection={setSection}/>
+        <SectionHeading value={"Proteins"} setSection={setSection} />
+        <SectionHeading value={"Sandwiches"} setSection={setSection} />
+        <SectionHeading value={"Sides"} setSection={setSection} />
+        <SectionHeading value={"Drink"} setSection={setSection} />
       </div>
       <div style={{ paddingTop: 50 }}>
-        {section === "Proteins" && <MenuDetailItem />}
+        {section === "Proteins" && <MenuDetailItemProteins />}
       </div>
     </div>
   );
