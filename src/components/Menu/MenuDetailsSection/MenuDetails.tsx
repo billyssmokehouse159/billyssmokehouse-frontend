@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { MenuDetailItemProteins } from "./SubHeadingsDetails/MenuDetailItemProteins";
 import { useDeviceType } from "../../../hooks/useDeviceType";
+import { MenuDetailItemDrinks } from "./SubHeadingsDetails/MenuDetailItemDrinks";
+import { SectionHeading, type SectionTypes } from "./SubHeadingsDetails/SectionHeading";
 
-type SectionTypes = "Proteins" | "Sandwiches" | "Sides" | "Drink";
 
 export const MenuDetails = () => {
   const device = useDeviceType();
@@ -26,42 +27,13 @@ export const MenuDetails = () => {
         <SectionHeading value={"Proteins"} setSection={setSection} />
         <SectionHeading value={"Sandwiches"} setSection={setSection} />
         <SectionHeading value={"Sides"} setSection={setSection} />
-        <SectionHeading value={"Drink"} setSection={setSection} />
+        <SectionHeading value={"Drinks"} setSection={setSection} />
       </div>
       <div style={{ paddingTop: 50 }}>
         {section === "Proteins" && <MenuDetailItemProteins />}
+        {section === "Drinks" && <MenuDetailItemDrinks/>}
       </div>
     </div>
   );
 };
-export const SectionHeading = ({
-  value,
-  setSection,
-}: {
-  value: SectionTypes;
-  setSection: (value: SectionTypes) => void;
-}) => {
-  const device = useDeviceType();
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        fontSize: device === "mobile" ? "24px" : device === "tablet" ? "40px" : "74px",
-        fontWeight: 700,
-        color: "#4a2c2a",
-        justifyContent: "center",
-        gap: 20,
-        letterSpacing: "-0.02em",
-        borderBottom: "3px solid #c97d5e",
-        paddingBottom: device === "mobile" ? "0px" : "8px",
-        width: "fit-content",
-        margin: "0 auto",
-        cursor: "pointer",
-      }}
-      onClick={() => setSection(value)}
-    >
-      {value}
-    </div>
-  );
-};
