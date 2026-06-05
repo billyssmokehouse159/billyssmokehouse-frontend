@@ -15,10 +15,8 @@ export const GiftCardPage = () => {
   const device = useDeviceType();
   const [checkoutLink, setCheckoutLink] = useState("");
 
-  console.log("checkoutLink", checkoutLink);
   useEffect(() => {
     const fetchCheckoutLink = async () => {
-        console.log("in fetchCheckoutLink");
 
       const response = await fetch(`${API_URL}/create-session`, {
         headers: {
@@ -31,11 +29,8 @@ export const GiftCardPage = () => {
           giftCardId: "401",
         }),
       });
-              console.log(" response", response);
 
       const { url } = await response.json();
-                    console.log(" url", url);
-
       setCheckoutLink(url);
     };
     fetchCheckoutLink();
