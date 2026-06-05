@@ -1,10 +1,45 @@
+import { useEffect, useState } from "react";
 import { useDeviceType } from "../../hooks/useDeviceType";
 import { Footer } from "../Footer/Footer";
 import { DesktopHeader } from "../Headers/DesktopHeader";
 import { MobileHeader } from "../Headers/MobileHeader";
 
+const API_URL =
+  import.meta.env.VITE_ENV === "dev"
+    ? import.meta.env.VITE_API_DEV
+    : import.meta.env.VITE_ENV === "staging"
+    ? import.meta.env.VITE_API_STAGING
+    : import.meta.env.VITE_API_PROD; 
+
 export const GiftCardPage = () => {
   const device = useDeviceType();
+  const [checkoutLink, setCheckoutLink] = useState("");
+
+  console.log("checkoutLink", checkoutLink);
+  useEffect(() => {
+    const fetchCheckoutLink = async () => {
+        console.log("in fetchCheckoutLink");
+
+      const response = await fetch(`${API_URL}/create-session`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          email: "iqralatif159@gmail.com",
+          giftRecipient: "iqralatif159@gmail.com",
+          giftCardId: "401",
+        }),
+      });
+              console.log(" response", response);
+
+      const { url } = await response.json();
+                    console.log(" url", url);
+
+      setCheckoutLink(url);
+    };
+    fetchCheckoutLink();
+  }, []);
 
   return (
     <div
@@ -49,6 +84,11 @@ export const GiftCardPage = () => {
           >
             We’re working on something great — stay tuned.
           </p>
+          <button
+            onClick={() => (window.location.href = `${checkoutLink}`)}
+          >
+            Checkout
+          </button>
         </div>
       </div>
       <Footer />
