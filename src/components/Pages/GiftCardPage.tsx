@@ -9,7 +9,7 @@ const API_URL =
     ? import.meta.env.VITE_API_DEV
     : import.meta.env.VITE_ENV === "staging"
     ? import.meta.env.VITE_API_STAGING
-    : import.meta.env.VITE_API_PROD; 
+    : import.meta.env.VITE_API_PROD;
 
 export const GiftCardPage = () => {
   const device = useDeviceType();
@@ -17,7 +17,6 @@ export const GiftCardPage = () => {
 
   useEffect(() => {
     const fetchCheckoutLink = async () => {
-
       const response = await fetch(`${API_URL}/create-session`, {
         headers: {
           "Content-Type": "application/json",
@@ -25,8 +24,10 @@ export const GiftCardPage = () => {
         method: "POST",
         body: JSON.stringify({
           email: "iqralatif159@gmail.com",
-          giftRecipient: "iqralatif159@gmail.com",
+          giftRecipientEmail: "iqralatif159@gmail.com",
           giftCardId: "401",
+          senderName: "senderName",
+          giftRecipientName: "giftRecipientName name",
         }),
       });
 
@@ -79,9 +80,7 @@ export const GiftCardPage = () => {
           >
             We’re working on something great — stay tuned.
           </p>
-          <button
-            onClick={() => (window.location.href = `${checkoutLink}`)}
-          >
+          <button onClick={() => (window.location.href = `${checkoutLink}`)}>
             Checkout
           </button>
         </div>
